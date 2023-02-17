@@ -33,8 +33,6 @@ class ExchangeController extends AbstractController
         $form = $this->createForm(RateRequestFormType::class, $form);
         $form->handleRequest($request);
 
-        var_dump(132);
-
         $rates = [];
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
